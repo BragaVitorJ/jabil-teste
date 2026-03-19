@@ -1,0 +1,20 @@
+<h2>Nova Tarefa</h2>
+
+<form (ngSubmit)="submit()">
+  <input [(ngModel)]="task.title" name="title" placeholder="Título" required>
+  <input [(ngModel)]="task.description" name="description" placeholder="Descrição" required>
+
+  <select [(ngModel)]="task.priority" name="priority">
+    <option value="low">Low</option>
+    <option value="normal">Normal</option>
+    <option value="high">High</option>
+  </select>
+
+  <select [(ngModel)]="task.status" name="status">
+    <option value="not started">Not Started</option>
+    <option value="in progress">In Progress</option>
+    <option value="completed">Completed</option>
+  </select>
+
+  <button type="submit">Criar</button>
+</form>
